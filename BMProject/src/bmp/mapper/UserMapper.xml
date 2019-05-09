@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="bmp.mapper.UserMapper">
+	<insert id="insertUser" parameterClass="UserVO">
+		INSERT INTO bm_user
+			 ( user_id
+			 , user_pwd
+			 , user_name
+			 , user_tel
+			 , user_grade
+			 , user_addr1
+			 , user_addr2
+			 , user_point
+			 )
+		VALUES
+			 ( #id#
+			 , #pw#
+			 , #name#
+			 , #tel#
+			 , #grade#
+			 , #addr1#
+			 , #addr2#
+			 , #point#
+			 )	 
+	</insert>
+	
+	<update id="updateUser" parameterClass="UserVO">
+		UPDATE bm_user
+		   SET set 1=1 
+		   <isNotEmpty property="pw" prepend=",">
+		   	   user_pwd = #pw#
+		   </isNotEmpty>
+		   <isNotEmpty property="name" prepend=","> 
+		   	   user_name = #name#
+		   </isNotEmpty>
+		   <isNotEmpty property="tel" prepend=","> 
+		   	   user_tel = #tel#
+		   </isNotEmpty>
+		   <isNotEmpty property="grade" prepend=","> 
+		   	   user_grade = #grade#
+		   </isNotEmpty>
+		   <isNotEmpty property="add1" prepend=","> 
+		   	   user_addr1 = #addr1#
+		   </isNotEmpty>
+		   <isNotEmpty property="add2" prepend=","> 
+		   	   user_addr2 = #addr2#
+		   </isNotEmpty>
+		   <isNotEmpty property="point" prepend=","> 
+		   	   user_point = #point#
+		   </isNotEmpty> 
+		 WHERE user_id = #id#  
+	</update>
+	
+	<delete id="deleteUser" parameterClass="HashMap">
+		DELETE bm_user
+		 WHERE user_id = #user_id#
+		   AND user_pwd = #user_pwd#
+	</delete>
+	
+	<select id="readUser" parameterClass="UserVO" resultClass="UserVO">
+		SELECT
+		  FROM bm_user
+		 WHERE 1=1 
+		<isNotEmpty property="id">
+		   AND user_id = #id#
+		</isNotEmpty>
+		<isNotEmpty property="name"> 
+		   AND user_name = #name#
+		</isNotEmpty>
+		<isNotEmpty property="tel"> 
+		   AND user_tel = #tel#
+		</isNotEmpty>
+		<isNotEmpty property="grade"> 
+		   AND user_grade = #grade#
+		</isNotEmpty>
+		<isNotEmpty property="add1"> 
+		   AND user_addr1 like '%'|| #add1# ||'%' 
+		</isNotEmpty>  
+		<isNotEmpty property="add2"> 
+		   AND user_addr2 like '%'|| #add2# ||'%' 
+		</isNotEmpty>
+		<isNotEmpty property="point"> 
+		   AND user_point = #point#
+		</isNotEmpty> 
+	</select>
+	
+	<select id="readAllUser" resultClass="UserVO">
+		SELECT user_id as id
+			 , user_name as name
+			 , user_tel as tel
+			 , user_grade as grade
+			 , user_addr1 as addr1
+			 , user_addr2 as addr2
+			 , user_point as point
+		  FROM bm_user
+	</select>
+	
+	<select id="checkId" parameterClass="String" resultClass="int">
+		SELECT COUNT(*) 
+		  FROM bm_user
+		 WHERE user_id = #id# 
+	</select>
+	
+	<select id="joinUser" parameterClass="HashMap" resultClass="UserVO">
+		SELECT user_id as id
+			 , user_name as name
+			 , user_tel as tel
+			 , user_grade as grade
+			 , user_addr1 as addr1
+			 , user_addr2 as addr2
+			 , user_point as point
+		  FROM bm_user
+		 WHERE user_id = #user_id#
+		   AND user_pwd = #user_pwd# 
+	</select>
+</sqlMap>

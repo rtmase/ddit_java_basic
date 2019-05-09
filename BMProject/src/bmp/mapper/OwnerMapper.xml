@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="bmp.mapper.OwnerMapper">
+
+
+	<select id="checkId" parameterClass="String" resultClass="int">
+		SELECT COUNT(*) 
+		  FROM bm_owner
+		 WHERE owner_id = #id# 
+	</select>
+	
+	<select id="joinOwner" parameterClass="HashMap" resultClass="OwnerVO">
+		SELECT owner_id as id
+			 , owner_name as name
+			 , owner_tel as tel
+			 , owner_grade as grade
+			 , owner_corpnum as corpnum
+		  FROM bm_owner
+		 WHERE owner_id = #user_id#
+		   AND owner_pwd = #user_pwd# 
+	</select>
+</sqlMap>

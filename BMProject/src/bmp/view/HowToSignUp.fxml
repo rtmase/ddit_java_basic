@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmp.view.HowToSignUpController">
+   <children>
+      <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="btnSignUser" fx:id="btnUser" mnemonicParsing="false" onAction="#userSign" prefHeight="200.0" prefWidth="150.0" textFill="#030303">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="92.0" text="사용자">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="배달의민족 한나체 Pro" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="15.0" prefWidth="103.0" text="회원가입">
+                           <font>
+                              <Font name="배달의민족 한나체 Pro" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="70.0" />
+                     </padding>
+                  </VBox>
+               </graphic></Button>
+            <Button id="btnSignOwner" fx:id="btnOwner" mnemonicParsing="false" onAction="#ownerSign" prefHeight="200.0" prefWidth="150.0">
+               <font>
+                  <Font name="배달의민족 한나체 Pro" size="20.0" />
+               </font>
+               <graphic>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="92.0" text="사업자">
+                           <font>
+                              <Font name="배달의민족 한나체 Pro" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="15.0" prefWidth="103.0" text="회원가입">
+                           <font>
+                              <Font name="배달의민족 한나체 Pro" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="70.0" />
+                     </padding>
+                  </VBox>
+               </graphic></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

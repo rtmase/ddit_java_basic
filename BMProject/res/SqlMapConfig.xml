@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<properties resource="SqlMapConfig.properties" />
+	
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="32" maxSessions="10"
+		maxTransactions="5" useStatementNamespaces="true" />
+
+	<typeAlias alias="UserVO" type="bmp.vo.UserVO"/>
+	<typeAlias alias="OwnerVO" type="bmp.vo.OwnerVO"/>
+	<typeAlias alias="NoticeVO" type="bmp.vo.NoticeVO"/>
+	<typeAlias alias="CategoryVO" type="bmp.vo.CategoryVO"/>
+	<typeAlias alias="ShopVO" type="bmp.vo.ShopVO"/>
+	<typeAlias alias="MenuVO" type="bmp.vo.MenuVO"/>
+	<typeAlias alias="OrderVO" type="bmp.vo.OrderVO"/>
+	<typeAlias alias="OrderDetailVO" type="bmp.vo.OrderDetailVO"/>
+	<typeAlias alias="ReviewVO" type="bmp.vo.ReviewVO"/>
+
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="${driver}" />
+			<property name="JDBC.ConnectionURL" value="${url}" />
+			<property name="JDBC.Username" value="${username}" />
+			<property name="JDBC.Password" value="${password}" />
+		</dataSource>
+	</transactionManager>
+	
+	<sqlMap resource="bmp/mapper/UserMapper.xml"/>
+	<sqlMap resource="bmp/mapper/OwnerMapper.xml"/>
+<!-- 	<sqlMap resource="bmp/mapper/NoticeMapper.xml"/> -->
+<!-- 	<sqlMap resource="bmp/mapper/CategoryMapper.xml"/> -->
+<!-- 	<sqlMap resource="bmp/mapper/ShopMapper.xml"/> -->
+<!-- 	<sqlMap resource="bmp/mapper/MenuMapper.xml"/> -->
+<!-- 	<sqlMap resource="bmp/mapper/OrderMapper.xml"/> -->
+<!-- 	<sqlMap resource="bmp/mapper/OrderDetailMapper.xml"/> -->
+<!-- 	<sqlMap resource="bmp/mapper/ReviewMapper.xml"/> -->
+	
+</sqlMapConfig>
+
+
+
+
+
+

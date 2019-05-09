@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmp.view.MainViewController">
+   <children>
+      <VBox layoutX="-39.0" layoutY="120.0" prefHeight="176.0" prefWidth="700.0">
+         <children>
+            <HBox prefHeight="25.0" prefWidth="700.0" spacing="10.0">
+               <children>
+                  <Label text="아이디 :">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idField" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="260.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="700.0" spacing="10.0">
+               <children>
+                  <Label text="비밀번호 :">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="pwField" onKeyPressed="#setEnter" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="245.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="ID 찾기">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="PW 찾기">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleSignUp" text="회원가입">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="245.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+      <HBox prefHeight="225.0" prefWidth="700.0">
+         <children>
+            <VBox prefHeight="225.0" prefWidth="430.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/BM_.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="230.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="70.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#Join" prefHeight="65.0" prefWidth="72.0" text="로그인">
+               <padding>
+                  <Insets bottom="25.0" left="5.0" right="10.0" top="25.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets top="160.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

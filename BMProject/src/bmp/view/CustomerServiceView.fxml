@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="700.0" style="-fx-background-color: #D9DED8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets top="25.0" />
+   </padding>
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="320.0">
+         <children>
+            <Label text="고객센터">
+               <font>
+                  <Font name="배달의민족 한나체 Pro" size="20.0" />
+               </font>
+            </Label>
+            <Label text="FAQ">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="배달의민족 한나체 Pro" size="15.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="40.0" prefWidth="320.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="TOP 10">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="결제">
+                  	<font>
+                  		<Font name="배달의민족 한나체 Pro" size="15.0" />
+               		</font></Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="리뷰관리">
+                  	<font>
+                  		<Font name="배달의민족 한나체 Pro" size="15.0" />
+               		</font></Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="이용문의">
+                  	<font>
+                  		<Font name="배달의민족 한나체 Pro" size="15.0" />
+               		</font></Button>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="320.0" text="1 : 1 문의하기">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="배달의민족 한나체 Pro" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView layoutX="350.0" layoutY="13.0" prefHeight="265.0" prefWidth="339.0">
+        <columns>
+          <TableColumn prefWidth="338.0" text="FAQ" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

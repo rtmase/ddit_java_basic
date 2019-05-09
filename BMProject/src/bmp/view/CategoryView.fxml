@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="290.0" prefWidth="700.0">
+         <children>
+            <HBox prefHeight="160.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="한식">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="일식">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="중식">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="분식">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="160.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="치킨">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="피자">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="족발/보쌈">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="160.0" prefWidth="175.0" text="야식">
+                     <font>
+                        <Font name="배달의민족 한나체 Pro" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets top="25.0" />
+   </padding>
+</AnchorPane>
